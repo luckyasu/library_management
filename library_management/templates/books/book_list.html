@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+    <meta charset="UTF-8">
+    <title>图书管理系统</title>
+    <link rel="stylesheet" href="./book_list.css">
+</head>
+<body>
+
+<header class="publicHeader">
+    <h1>图书管理系统</h1>
+    <div class="publicHeaderR">
+        <p><span>下午好!</span><span>{{ name }}</span> 管理员 ，欢迎你! </p>
+        <a href="/logout/">退出</a>
+    </div>
+</header>
+
+<section class="publicMian">
+    <div class="left">
+        <h2 class="leftH2"><span class="span1"></span> 功能列表 <span></span></h2>
+        <nav>
+            <ul class="list">
+                <li><a href="/add_publisher/">添加出版社页面</a></li>
+                <li><a href="/add_book/">添加图书页面</a></li>
+                <li><a href="/add_author/">添加作者页面</a></li>
+                <li><a href="/logout/">退出系统</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="mainContent">
+        <div>
+            <h2>图书列表页面</h2>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <th>序号</th>
+                    <th>图书ID</th>
+                    <th>图书名称</th>
+                    <th>价格</th>
+                    <th>库存</th>
+                    <th>销售</th>
+                    <th>出版社ID</th>
+                    <th>操作</th>
+                </tr>
+                {% for book_obj in book_obj_list %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ book_obj.id }}</td>
+                    <td>{{ book_obj.name }}</td>
+                    <td>{{ book_obj.price }}</td>
+                    <td>{{ book_obj.inventory }}</td>
+                    <td>{{ book_obj.sale_num }}</td>
+                    <td>{{ book_obj.publisher.publisher_name }}</td>
+                    <td class="table-actions">
+                        <a href="/edit_book/?id={{ book_obj.id }}">修改</a>
+                        <a href="/delete_book/?id={{ book_obj.id }}">删除</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</section>
+</body>
+</html>
