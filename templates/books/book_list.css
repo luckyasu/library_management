@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+
+.publicHeader {
+    background: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.publicHeader h1 {
+    margin: 0;
+}
+
+.publicHeaderR {
+    text-align: right;
+}
+
+.publicHeaderR p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.publicHeaderR a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    background: #ff5722;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.publicMian {
+    display: flex;
+}
+
+.left {
+    width: 20%;
+    background: #343a40;
+    color: white;
+    padding: 20px;
+}
+
+.leftH2 {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+}
+
+.list li {
+    margin-bottom: 10px;
+}
+
+.list a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    background: #495057;
+    border-radius: 5px;
+}
+
+.list a:hover {
+    background: #6c757d;
+}
+
+.mainContent {
+    width: 80%;
+    padding: 20px;
+}
+
+.mainContent h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background: #007bff;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+tr:hover {
+    background: #ddd;
+}
+
+.table-actions a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.table-actions a:hover {
+    text-decoration: underline;
+}
